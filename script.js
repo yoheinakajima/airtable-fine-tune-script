@@ -4,7 +4,7 @@ const API_KEY = '';
 //Set Filestack API Key Here
 let FILESTACK_API_KEY = '';
 
-// Select Table 1 and format data. The "Formula" column combines a "Prompt" column and "Completions" column using this formula: '{"prompt": "'&Prompts&'\n\n###\n\n", "completion": "'&Completions&'###"}'
+// Select Table 1 and format data. The "Formula" column combines a "Prompt" column and "Completions" column using this formula: '{"prompt": "'&Prompts&'\n\n###\n\n", "completion": " '&Completions&'###"}'
 let table = base.getTable("Table 1");
 let query = await table.selectRecordsAsync({fields: ['Formula']});
 output.table(query.records);
